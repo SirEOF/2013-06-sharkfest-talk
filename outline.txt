@@ -1,0 +1,18 @@
+As a group. the security industry has solved a lot of difficult
+problems.  Firewalls do a great job blocking traffic, overflow
+vulnerabilities are getting hard and harder to exploit on modern
+systems, and spam filters/captchas are nearly perfect. But there's one
+place where we have dropped the ball: cryptography. Why is cryptography
+so hard to get right? As a developer, you have to understand random
+numbers, key generation, padding, block chaining, initialization
+vectors, proper signature generation, and more, just to be somewhat
+safe. Even security professionals manage to screw it up, so how do we
+expect an average developer to get it right?
+
+For this talk, we'll be getting into deep detail on a bunch of well
+known attacks against crypto - including padding oracles (the Vaudenay
+attack), hash length extension, BEAST, CRIME, poorly generated random
+numbers, WEP, and more - to help demonstrate the problem, and begin to
+look at how we might be able to fix it. 
+
+
