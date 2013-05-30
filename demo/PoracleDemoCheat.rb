@@ -3,16 +3,16 @@
 # Created: February 7, 2013
 # By: Ron Bowes
 #
-# A padding oracle attack implemented for Shmoocon
+# A padding oracle attack implemented for Sharkfest
 ##
 #
 require 'httparty'
 require './poracle/Poracle'
 
-class PaddingOracleShmoocon
+class PaddingOracleSharkfest
   attr_reader :iv, :data, :blocksize
 
-  NAME = "PaddingOracleShmoocon(tm)"
+  NAME = "PaddingOracleSharkfest(tm)"
 
   def initialize()
     @data = HTTParty.get("http://localhost:20222/paddingoracle").parsed_response
@@ -38,7 +38,7 @@ end
 # Attempt a remote check
 puts("Starting remote test (this requires RemoteTestServer.rb to be running on localhost:20222)")
 begin
-  mod = PaddingOracleShmoocon.new
+  mod = PaddingOracleSharkfest.new
   puts Poracle.decrypt(mod, mod.data, mod.iv, true)
 rescue Errno::ECONNREFUSED => e
   puts(e.class)

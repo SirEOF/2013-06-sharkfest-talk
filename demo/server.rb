@@ -122,7 +122,7 @@ get('/') do
 <<EOF
 <html>
   <body>
-    Welcome to Ron's Shmoocon Demo! Please select an option:
+    Welcome to Ron's Sharkfest Demo! Please select an option:
     <ul>
       <li><a href='/ecb'>ECB vs CBC encryption</li>
       <li><a href='/keyreuse'>Key re-use</li>

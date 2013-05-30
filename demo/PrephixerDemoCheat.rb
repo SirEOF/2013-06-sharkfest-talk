@@ -8,7 +8,7 @@ require 'httparty'
 
 require './prephixer/Prephixer'
 
-class ShmooconTestModule
+class SharkfestTestModule
   attr_reader :iv, :data
 
   NAME = "RemoteTestModule(tm)"
@@ -33,7 +33,7 @@ class ShmooconTestModule
 end
 
 begin
-  mod = ShmooconTestModule.new
+  mod = SharkfestTestModule.new
   puts Prephixer.decrypt(mod, true, true)
 rescue Errno::ECONNREFUSED => e
   puts(e.class)
