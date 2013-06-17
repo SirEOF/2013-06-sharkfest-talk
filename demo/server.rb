@@ -273,3 +273,8 @@ EOF
 
   return result
 end
+
+0.upto(9) do
+  $stderr.puts("FILTER OUT STDERR!")
+end
+
