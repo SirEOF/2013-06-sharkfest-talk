@@ -172,6 +172,8 @@ get("/keyreuse") do
     </form>
 EOF
   if(!params['data'].nil?)
+    puts("Data = #{params['data']}")
+
     data = [params['data']].pack('H*')
     result += <<EOF
       The result of encrypt("#{params['mode']}", "#{params['data']}" || TEXT1):
@@ -237,6 +239,7 @@ get("/paddingoracle") do
   encrypted = (c.update(TEXT2) + c.final)
 
   if(!params['data'].nil?)
+    puts("Data = #{params['data']}")
     data = [params['data']].pack("H*")
     success = nil
     begin
